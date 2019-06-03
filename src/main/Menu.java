@@ -30,7 +30,7 @@ public class Menu
             System.out.println("Insert coin: ");
             vending.setAddingCoins(scanner.nextInt() + vending.getAddingCoins());
             System.out.println("Amount paid: " + vending.getAddingCoins());
-            System.out.println("Stop? s[yes]");
+            System.out.println("s[stop]");
             String stop = scanner.next();
             if (stop.equals("s"))
             {
@@ -69,6 +69,6 @@ public class Menu
             product.printInfo();
         }
         Resr resr = new Resr(vending);
-        System.out.println("Your rest: " + resr.getRest() + "$");
+        System.out.println("Your rest: " + resr.getRest() + "$, your coins: " + resr.showCoins());
     }
 }
