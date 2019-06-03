@@ -27,6 +27,10 @@ public class Load
                     vending.setToPay(vending.getToPay() + productList.get(i).getPrices());
                     vending.setAddingCoins(vending.getAddingCoins() - productList.get(i).getPrices());
                 }
+                if (productList.get(i).getPrices() > vending.getAddingCoins())
+                {
+                    System.out.println("Not enough $");
+                }
 
             }
             if (vending.getAddingCoins() <= 0)

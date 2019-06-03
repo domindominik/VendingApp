@@ -36,20 +36,23 @@ public class Menu
             {
                 break;
             }
-
         }
+
         System.out.println("Your amount: " + vending.getAddingCoins());
 
         Load load = new Load(vending, productList,userProduct);
 
-        for (Product product: productList)
+
+        while (vending.getAddingCoins() > 0)
         {
-            product.printInfo();
-        }
-        while (true)
-        {
+            for (Product product: productList)
+            {
+                product.printInfo();
+            }
+
             System.out.println("You have " + vending.getAddingCoins() + "$ Chose your product,\t s[stop]");
             String name = scanner.next();
+
             if (name.equals("s"))
             {
                 break;
@@ -60,17 +63,12 @@ public class Menu
             }
         }
 
-
-
-
-
-
-
-
-
+        System.out.println("My products: ");
         for (Product product: userProduct)
         {
             product.printInfo();
         }
+        Resr resr = new Resr(vending);
+        System.out.println("Your rest: " + resr.getRest() + "$");
     }
 }
