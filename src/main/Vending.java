@@ -30,6 +30,11 @@ public class Vending
         return toPay;
     }
 
+    public void addProduct(Product product)
+    {
+        this.productList.add(product);
+    }
+
     public void setProductList(List<Product> productList)
     {
         this.productList = productList;

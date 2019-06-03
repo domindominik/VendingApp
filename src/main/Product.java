@@ -34,6 +34,6 @@ public class Product
     public void printInfo()
     {
         System.out.println("Product name: " + name +
-                "Price: " + prices);
+                ", Price: " + prices);
     }
 }
